@@ -1,4 +1,3 @@
-#include <iostream>
 #include "types.h"
 
 #pragma once  // tells the compiler to only include this file once
@@ -28,7 +27,7 @@ class pcb {
    public:
     pcb(osp2023::id_type id, osp2023::time_type total_time)
         : id(id), total_time(total_time), time_used(0), total_wait_time(0) {}
-        
+
     // max and min duration for a process in our system.
     static constexpr osp2023::time_type MAX_DURATION = 100;
     static constexpr osp2023::time_type MIN_DURATION = 10;
