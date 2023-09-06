@@ -39,9 +39,11 @@ osp2023::id_type ReadDataFile::toIdType(const std::string& num){
     try {
         id = std::stoi(num);
     } catch (std::invalid_argument const &e) {
-        std::cerr << "Bad input: std::invalid_argument thrown" << std::endl;
+        std::cerr << "Bad input in Datafile: std::invalid_argument thrown" << std::endl;
+        exit(EXIT_FAILURE);
     } catch (std::out_of_range const &e) {
-        std::cerr << "Integer overflow: std::out_of_range thrown" << std::endl;
+        std::cerr << "Integer overflow in Datafile: std::out_of_range thrown" << std::endl;
+        exit(EXIT_FAILURE);
     }
 
     return id;
@@ -52,9 +54,11 @@ osp2023::time_type ReadDataFile::toTimeType(const std::string& num){
     try {
         burstTime = std::stoll(num);
     } catch (std::invalid_argument const &e) {
-        std::cerr << "Bad input: std::invalid_argument thrown" << std::endl;
+        std::cerr << "Bad input in Datafile: std::invalid_argument thrown" << std::endl;
+        exit(EXIT_FAILURE);
     } catch (std::out_of_range const &e) {
-        std::cerr << "Integer overflow: std::out_of_range thrown" << std::endl;
+        std::cerr << "Integer overflow in Datafile: std::out_of_range thrown" << std::endl;
+        exit(EXIT_FAILURE);
     }
 
     return burstTime;
