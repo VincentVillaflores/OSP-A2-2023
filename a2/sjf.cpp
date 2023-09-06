@@ -1,7 +1,6 @@
 #include <iostream>
 #include "ReadDataFile.h"
 #include <algorithm>
-#include <cstdlib>
 
 int main(int argc, char* argv[]) {
     if (argc != 2){
