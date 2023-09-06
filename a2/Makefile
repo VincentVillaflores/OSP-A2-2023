@@ -1,10 +1,10 @@
 all: fifo sjf rr
 
-fifo: fifo/fifo.cpp
-	g++ -o fifo fifo/fifo.cpp -Wall -Werror -std=c++20 -g
+fifo: fifo.cpp ReadDataFile.cpp
+	g++ -o fifo fifo.cpp ReadDataFile.cpp -Wall -Werror -std=c++20 -g
 
-sjf: sjf/sjf.cpp
-	g++ -o sjf sjf/sjf.cpp -Wall -Werror -std=c++20 -g
+sjf: sjf/sjf.cpp ReadDataFile.cpp
+	g++ -o sjf sjf.cpp ReadDataFile.cpp -Wall -Werror -std=c++20 -g
 
-rr: rr/rr.cpp
-	g++ -o rr rr/rr.cpp -Wall -Werror -std=c++20 -g
+rr: rr/rr.cpp ReadDataFile.cpp
+	g++ -o rr rr.cpp ReadDataFile.cpp -Wall -Werror -std=c++20 -g
