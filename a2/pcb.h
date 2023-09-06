@@ -38,11 +38,11 @@ class pcb {
     static constexpr osp2023::time_type MAX_DURATION = 100;
     static constexpr osp2023::time_type MIN_DURATION = 10;
 
-    osp2023::id_type getID(){
+    osp2023::id_type getID() const {
         return id;
     }
 
-    osp2023::time_type getBurstTime(){
+    osp2023::time_type getBurstTime() const {
         return burstTime;
     }
 
