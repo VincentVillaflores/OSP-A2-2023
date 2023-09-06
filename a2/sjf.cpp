@@ -1,8 +1,16 @@
 #include <iostream>
 #include "ReadDataFile.h"
+#include <algorithm>
 
 int main(int argc, char* argv[]) {
     std::deque<pcb> queue = ReadDataFile::ReadThisDataFile(argv[1]);
+    std::sort(queue.begin(), queue.end(), [](const pcb& a, const pcb& b) {
+        if (a.getBurstTime() == b.getBurstTime()) {
+            return a.getID() < b.getID();
+        }
+        return a.getBurstTime() < b.getBurstTime();
+    });
+    
     int numOfProceses = queue.size();
     osp2023::time_type timeElapsed = 0;
     osp2023::time_type totalWaiting = 0;
