@@ -58,8 +58,8 @@ class pcb {
         return waitingTime;
     }
 
-    void setWaitingTime(osp2023::time_type t){
-        waitingTime = t;
+    void addWaitingTime(osp2023::time_type t){
+        waitingTime += t;
     }
 
     osp2023::time_type getResponseTime(){
