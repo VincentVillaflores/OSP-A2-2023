@@ -32,7 +32,7 @@ class pcb {
 
    public:
     pcb(osp2023::id_type id, osp2023::time_type burstTime)
-        : id(id), burstTime(burstTime), turnaroundTime(0), waitingTime(0), responseTime(0), time_used(0), previousTimeInCPU(0) {}
+        : id(id), burstTime(burstTime), turnaroundTime(0), waitingTime(0), responseTime(osp2023::time_not_set), time_used(0), previousTimeInCPU(0) {}
 
     // max and min duration for a process in our system.
     static constexpr osp2023::time_type MAX_DURATION = 100;
