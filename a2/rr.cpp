@@ -73,6 +73,7 @@ int main(int argc, char* argv[]) {
             else {
                 timeElapsed += quantum;
                 currProcess.addTimeUsed(quantum);
+                currProcess.setPreviousTimeInCPU(timeElapsed);
 
                 queue.push_back(currProcess);
             } 
