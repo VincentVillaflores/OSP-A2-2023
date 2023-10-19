@@ -1,5 +1,7 @@
 # OSP-A2-2023
 
+![image](https://github.com/VincentVillaflores/OSP-A2-2023/assets/127155347/a50aa7c2-9d8a-4695-9a0e-d7f9971afc72)
+
 Understanding scheduling is an important skill to have in terms of understanding how operating
 system decides which processes use the CUP and how long they get to use them.
 Your task in this assignment is to develop a scheduling simulator in C++.
